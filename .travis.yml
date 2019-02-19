@@ -7,3 +7,15 @@ before_install:
 
 script:
   - docker run ahmedhawas/react-app-docker-kubernetes npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "Able"
+  env: "Able-env"
+  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-2-140028192721"
+  bucket_path: "Able"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
