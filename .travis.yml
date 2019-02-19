@@ -13,7 +13,7 @@ deploy:
   region: "us-east-2"
   app: "Able"
   env: "Able-env"
-  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-2-140028192721"
+  bucket_name: "elasticbeanstalk-us-east-2-140028192721"
   bucket_path: "Able"
   on:
     branch: master
